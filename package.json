@@ -1,0 +1,22 @@
+{
+  "name": "eleventy-typescript-interactive",
+  "version": "1.0.0",
+  "description": "Interactive Eleventy site with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf _site src/js",
+    "build:ts": "tsc",
+    "build": "npm run clean && npm run build:ts && eleventy",
+    "start": "npm run clean && npm run build:ts && eleventy --serve",
+    "dev": "concurrently \"tsc --watch\" \"eleventy --serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "typescript": "^5.2.2",
+    "concurrently": "^8.2.1",
+    "rimraf": "^5.0.1"
+  }
+}
